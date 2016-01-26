@@ -1,23 +1,24 @@
-#set win variable to zero
-#set loses variable to zero
+win = 0
+losses = 0
+puts "r, p, or s?"
+choice = gets.chomp.downcase
+3.times do 
+computer = ["r", "p", "s"].sample
+case [choice, computer] 
+  when ["p", "r"], ["s", "p"],["r", "s"] 
+    puts "you win"
+    win = win + 1
+  when ["r", "r"], ["s", "s"],["p", "p"]    
+    puts "tie"
+  when ["s", "r"], ["p", "s"],["r", "p"]    
+    puts "you lose"
+    losses = losses + 1
+end
 
-#Prompt user to chose r, p or s
-#get user input, set to choice variable, make sure it's lowercase
+end
 
-#Select computer choice randomly from arrary, set to variable computer
-
-#Three time do iterate
-  #use case statement with [player, computer] (This will be challenging, but totally worth it!)
-    #when ['p', 'r'], ect..
-      #puts you win
-      # add one to win variable
-    #When ['r','r'], ect..
-      #Puts you tied
-    #Else
-      #You Lose
-      # add one to win variable
-
-#Declare Winner at end with score of wins and loses
+puts win
+puts losses
 
 #### BONUS ####
   #Show history of computer and user moves at end.
