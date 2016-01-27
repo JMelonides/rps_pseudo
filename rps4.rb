@@ -20,6 +20,12 @@ end
 puts win
 puts losses
 
-#### BONUS ####
-  #Show history of computer and user moves at end.
+if win > losses
+	puts "you won"
+elsif win == losses	
+	puts "you tied"
+elsif win < losses
+  puts "you lost"
+end
+
 
