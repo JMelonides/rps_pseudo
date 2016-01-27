@@ -1,5 +1,6 @@
 win = 0
 losses = 0
+history = []
 3.times do
 puts "r, p, or s?"
 choice = gets.chomp.downcase 
@@ -14,7 +15,7 @@ case [choice, computer]
     puts "you lose"
     losses = losses + 1
 end
-
+history << [choice, computer]
 end
 
 puts win
@@ -27,5 +28,8 @@ elsif win == losses
 elsif win < losses
   puts "you lost"
 end
+
+puts " "
+print history
 
 
