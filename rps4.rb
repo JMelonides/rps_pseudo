@@ -1,8 +1,8 @@
 win = 0
 losses = 0
+3.times do
 puts "r, p, or s?"
-choice = gets.chomp.downcase
-3.times do 
+choice = gets.chomp.downcase 
 computer = ["r", "p", "s"].sample
 case [choice, computer] 
   when ["p", "r"], ["s", "p"],["r", "s"] 
